@@ -30,7 +30,7 @@ function Dashboard() {
           </select>
           <button
             onClick={toggleModal}
-            className="bg-black text-white rounded-lg px-4 py-2 flex items-center hover:bg-gray-800 transition duration-200"
+            className="bg-blue text-white rounded-lg px-4 py-2 flex items-center hover:bg-gray-800 transition duration-200"
           >
             <PlusIcon className="h-5 w-5 mr-2" />
             New Patient
