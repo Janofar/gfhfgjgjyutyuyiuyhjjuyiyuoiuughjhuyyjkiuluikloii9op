@@ -11,3 +11,44 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.react-tel-input  .form-control {
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+  border-bottom: 2px solid #d1d5db !important; /* Gray border color */
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+  transition: border-color 0.3s ease;
+  outline: none !important;
+  width: 100% !important;
+}
+
+.react-tel-input  .form-control:focus {
+  border-bottom-color: #10b981 !important; /* Green border color on focus */
+  box-shadow: none;
+}
+
+.react-tel-input .flag-dropdown {
+  box-shadow: none;
+  border: none !important;
+  background-color: none !important;
+  border-bottom: 2px solid #d1d5db !important; /* Gray border color */
+}
+.react-tel-input:focus-within .form-control {
+  border-bottom: 2px solid #10b981 !important;
+  background-color: #F4F4F3;
+}
+.react-tel-input:focus-within .flag-dropdown {
+  border-bottom: 2px solid #10b981 !important; /* Green bottom border on flag dropdown */
+}
+input[type="checkbox"] {
+  accent-color: #4CAF50;
+  /* Green color */
+}
+input[type="checkbox"]:checked {
+  background-color: green !important;
+  color: white; /* Tick color (white) when checked */
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
