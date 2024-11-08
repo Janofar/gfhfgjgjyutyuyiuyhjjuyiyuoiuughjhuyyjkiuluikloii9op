@@ -1,11 +1,10 @@
 import React, { useState } from "react";
-import { PlusIcon } from "@heroicons/react/solid"; // Import the Plus icon
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import { XIcon } from "@heroicons/react/outline";
 import maskGroupImg from "../assets/img/Mask group.png";
 
-const PatientDetailForm = ({ toggleModal }) => {
+const PatientDetailForm = ({ toggleModal, patientData, setPatientData }) => {
   const [formData, setFormData] = useState({
     phone: "",
     name: "",
@@ -38,6 +37,8 @@ const PatientDetailForm = ({ toggleModal }) => {
 
     toggleModal();
     localStorage.setItem("patientData", JSON.stringify(updatedFormData));
+    setPatientData([...patientData, updatedFormData]);
+
   };
 
   return (

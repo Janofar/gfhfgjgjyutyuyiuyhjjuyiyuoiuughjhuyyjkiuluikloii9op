@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { PlusIcon, UserIcon } from "@heroicons/react/solid";
-import { PlayIcon, DotsVerticalIcon } from "@heroicons/react/outline";
+import { PlusIcon } from "@heroicons/react/solid";
+import { PlayIcon } from "@heroicons/react/outline";
 import strawberryIcon from "../assets/img/Layer_1.png";
 import blueBerryIcon from "../assets/img/Group 2370.png";
 import PatientDetailForm from "../components/PatientDetailForm";
@@ -10,10 +10,21 @@ const names = ["Carl Driffth", "Evelyn Leger", "Michael Hoover"];
 
 function Dashboard() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [patientData,setPatientData] = useState([
+    {
+      name : "Carl Driffth"
+    },
+    {
+      name : "Evelyn Leger"
+    },
+    {
+      name :"Michael Hoover"
+    }]);
 
   const toggleModal = () => {
     setIsModalOpen(!isModalOpen);
   };
+ 
   return (
     <main className="p-6 space-y-6">
       <div className="flex justify-between items-center p-4">
@@ -38,7 +49,7 @@ function Dashboard() {
         </div>
       </div>
 
-      {isModalOpen && <PatientDetailForm toggleModal={toggleModal} />}
+      {isModalOpen && <PatientDetailForm toggleModal={toggleModal} patientData={patientData}  setPatientData={setPatientData}/>}
 
       {/* Stats Cards */}
       <div className="flex space-x-6">
@@ -91,7 +102,7 @@ function Dashboard() {
       </div>
 
       {/* Patient List */}
-      <Patientlist names={names} />
+      <Patientlist patientData={patientData}/>
     </main>
   );
 }

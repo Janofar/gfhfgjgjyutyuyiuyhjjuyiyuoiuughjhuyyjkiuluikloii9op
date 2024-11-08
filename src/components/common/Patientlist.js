@@ -1,8 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { PlusIcon, UserIcon } from "@heroicons/react/solid";
-import { PlayIcon, DotsVerticalIcon } from "@heroicons/react/outline";
-export const Patientlist = ({ names }) => {
+import {  DotsVerticalIcon } from "@heroicons/react/outline";
+export const Patientlist = ({ patientData}) => {
   const navigate = useNavigate();
   const goToPatientInfoPg = () => {
     navigate("/223");
@@ -19,7 +18,7 @@ export const Patientlist = ({ names }) => {
         <div className="overflow-x-auto">
           <table className="min-w-full table-auto border-collapse">
             <tbody>
-              {names.map((name, index) => (
+              {patientData.map((data, index) => (
                 <tr
                   key={index}
                   className="hover:bg-gray-100 hover:shadow-lg transition-shadow duration-200"
@@ -29,12 +28,12 @@ export const Patientlist = ({ names }) => {
                     <div className="flex items-center space-x-4 pt-2">
                       {/* User Avatar (first letter of the name) */}
                       <div className="w-10 h-10 rounded-full flex items-center justify-center bg-blue-500 text-center font-bold text-white">
-                        {name[0]} {/* Display first letter of the name */}
+                        {data.name[0]} {/* Display first letter of the name */}
                       </div>
 
                       {/* Name and additional info */}
                       <div>
-                        <p className="text-lg font-semibold">{name}</p>
+                        <p className="text-lg font-semibold text-left">{data.name}</p>
                         <p className="text-sm text-gray-500 text-left">
                           Male • 23
                         </p>
