@@ -10,6 +10,8 @@ const PatientDetailForm = ({ toggleModal, patientData, setPatientData }) => {
     name: "",
     email: "",
     isResponsibleParty: false,
+    age : 'Not specified',
+    gender :'Not specified'
   });
 
   const handleChange = (e) => {
@@ -36,7 +38,7 @@ const PatientDetailForm = ({ toggleModal, patientData, setPatientData }) => {
     };
 
     toggleModal();
-    localStorage.setItem("patientData", JSON.stringify(updatedFormData));
+    localStorage.setItem("patientData", JSON.stringify([...patientData, updatedFormData]));
     setPatientData([...patientData, updatedFormData]);
 
   };

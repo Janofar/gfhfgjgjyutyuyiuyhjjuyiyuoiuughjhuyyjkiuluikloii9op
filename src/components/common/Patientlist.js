@@ -35,7 +35,7 @@ export const Patientlist = ({ patientData}) => {
                       <div>
                         <p className="text-lg font-semibold text-left">{data.name}</p>
                         <p className="text-sm text-gray-500 text-left">
-                          Male • 23
+                          {data.gender} • {data.age}
                         </p>
                       </div>
                     </div>

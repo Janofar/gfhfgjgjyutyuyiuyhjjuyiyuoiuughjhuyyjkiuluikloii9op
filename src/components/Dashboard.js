@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { PlusIcon } from "@heroicons/react/solid";
 import { PlayIcon } from "@heroicons/react/outline";
 import strawberryIcon from "../assets/img/Layer_1.png";
@@ -6,20 +6,47 @@ import blueBerryIcon from "../assets/img/Group 2370.png";
 import PatientDetailForm from "../components/PatientDetailForm";
 import { Patientlist } from "./common/Patientlist";
 
-const names = ["Carl Driffth", "Evelyn Leger", "Michael Hoover"];
+const defaultPatientData = [
+  {
+    name : "Carl Driffth",
+    phone: "9847474738",
+    email: "carl@gmail.com",
+    gender : "Male",
+    age : 23,
+    isResponsibleParty: false,
+  },
+  {
+    name : "Evelyn Leger",
+    phone: "3842784782",
+    email: "evenly@gmail.com",
+    gender : "Male",
+    age : 23,
+    isResponsibleParty: false,
+  },
+  {
+    name :"Michael Hoover",
+    phone: "8483738383",
+    email: "micheal@gmail.com",
+    gender : "Male",
+    age : 23,
+    isResponsibleParty: false,
+  }
+];
 
 function Dashboard() {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [patientData,setPatientData] = useState([
-    {
-      name : "Carl Driffth"
-    },
-    {
-      name : "Evelyn Leger"
-    },
-    {
-      name :"Michael Hoover"
-    }]);
+  const [patientData,setPatientData] = useState([]);
+
+  useEffect(()=>{
+    const storedData = JSON.parse(localStorage.getItem("patientData"));
+
+    if (storedData) {
+      setPatientData(storedData);
+    }else{
+      setPatientData(defaultPatientData);
+    }
+    
+  },[]);
 
   const toggleModal = () => {
     setIsModalOpen(!isModalOpen);
