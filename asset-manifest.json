@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/react-patient-dashboard/static/css/main.d9647139.css",
-    "main.js": "/react-patient-dashboard/static/js/main.94db36d8.js",
+    "main.js": "/react-patient-dashboard/static/js/main.43884852.js",
     "static/js/453.9a7d7bc3.chunk.js": "/react-patient-dashboard/static/js/453.9a7d7bc3.chunk.js",
     "static/media/Mask group.png": "/react-patient-dashboard/static/media/Mask group.27bb8f77210d22566000.png",
     "static/media/logo.svg": "/react-patient-dashboard/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/react-patient-dashboard/index.html",
     "main.d9647139.css.map": "/react-patient-dashboard/static/css/main.d9647139.css.map",
-    "main.94db36d8.js.map": "/react-patient-dashboard/static/js/main.94db36d8.js.map",
+    "main.43884852.js.map": "/react-patient-dashboard/static/js/main.43884852.js.map",
     "453.9a7d7bc3.chunk.js.map": "/react-patient-dashboard/static/js/453.9a7d7bc3.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d9647139.css",
-    "static/js/main.94db36d8.js"
+    "static/js/main.43884852.js"
   ]
 }
