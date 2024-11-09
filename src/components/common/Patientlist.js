@@ -9,8 +9,8 @@ export const Patientlist = ({ patientData}) => {
   return (
     <div className="bg-white rounded-lg shadow overflow-hidden">
       <div className="px-6 py-3 text-gray-700 font-semibold border-b flex justify-between">
-        <div className="text-gray-500">Patients</div>
-        <div className="text-gray-500">Actions</div>
+        <div className="text-gray-500 text-[0.88rem]">Patients</div>
+        <div className="text-gray-500 text-[0.88rem]">Action</div>
       </div>
 
       <div className="divide-y">
@@ -27,14 +27,14 @@ export const Patientlist = ({ patientData}) => {
                   <td className="px-6 py-4 border-b">
                     <div className="flex items-center space-x-4 pt-2">
                       {/* User Avatar (first letter of the name) */}
-                      <div className="w-10 h-10 rounded-full flex items-center justify-center bg-blue-500 text-center font-bold text-white">
+                      <div className="w-10 h-10 uppercase rounded-full flex items-center justify-center bg-[#EE5E3D] text-center font-bold text-white">
                         {data.name[0]} {/* Display first letter of the name */}
                       </div>
 
                       {/* Name and additional info */}
                       <div>
-                        <p className="text-lg font-semibold text-left">{data.name}</p>
-                        <p className="text-sm text-gray-500 text-left">
+                        <p className="font-medium text-left text-[1rem]">{data.name}</p>
+                        <p className="text-gray-500 text-left text-[0.88rem]">
                           {data.gender} • {data.age}
                         </p>
                       </div>
@@ -83,19 +83,19 @@ export const Patientlist = ({ patientData}) => {
                     <span
                       className={`text-sm flex justify-start font-normal ${
                         index === 0
-                          ? "text-yellow-600"
+                          ? "text-[#FDCA40]"
                           : index === 1
-                          ? "text-red-600"
-                          : "text-green-600"
+                          ? "text-[#FF4545]"
+                          : "text-[#20A271]"
                       }`}
                     >
                       <span
                         className={`${
                           index === 0
-                            ? "text-yellow-600"
+                            ? "text-[#FDCA40]"
                             : index === 1
-                            ? "text-red-600"
-                            : "text-green-600"
+                            ? "text-[#FF4545]"
+                            : "text-[#20A271]"
                         }`}
                       >
                         •

@@ -1,104 +1,110 @@
 import React from "react"
+import { PencilIcon } from "@heroicons/react/outline";
 export const CoverageCard = () => {
   return (
     <div className="bg-gray-50 p-4 rounded-lg shadow-md">
     <div className="flex justify-between mb-4">
-      <h3 className="text-lg font-semibold">Coverage</h3>
-      <button className="text-teal-500">Edit</button>
+      <h3 className="text-[#000000] text-[1.25rem] font-bold">Coverage</h3>
+      <div className="flex justify-between items-center ">
+          <PencilIcon className="h-4 w-4 mr-1 text-[#049C8A]" />
+          <button className="underline text-[#049C8A] text-[1rem] font-medium">
+            Edit
+          </button>
+        </div>
     </div>
 
     <div className="grid grid-cols-2 gap-4">
       <div className="flex flex-col items-start gap-4">
         {/* Eligibility */}
         <div className="flex flex-col items-start">
-          <strong>Eligibility:</strong>
-          <span>Eligible</span>
+          <span className="text-[#525257] text-[0.875rem] font-normal">Eligibility:</span>
+          <span className="text-[#283342] text-[1rem] font-medium" >Eligible</span>
         </div>
 
         {/* Policy Network Type */}
         <div className="flex flex-col items-start">
-          <strong>Policy network type:</strong>
-          <span>PPO</span>
+          <span className="text-[#525257] text-[0.875rem] font-normal">Policy network type:</span>
+          <span className="text-[#283342] text-[1rem] font-medium">PPO</span>
         </div>
 
         {/* Benefit Max */}
         <div className="flex flex-col items-start">
-          <strong>Benefit Max:</strong>
-          <span>$2,000.00</span>
+          <span className="text-[#525257] text-[0.875rem] font-normal">Benefit Max:</span>
+          <span className="text-[#283342] text-[1rem] font-medium">$2,000.00</span>
         </div>
 
         {/* Benefit Remaining */}
         <div className="flex flex-col items-start">
-          <strong>Benefit Remaining:</strong>
-          <span>$500.00</span>
+          <span className="text-[#525257] text-[0.875rem] font-normal">Benefit Remaining:</span>
+          <span className="text-[#283342] text-[1rem] font-medium">$500.00</span>
         </div>
 
         {/* Pre-Auth & Pre-D */}
         <div className="flex flex-col items-start">
-          <strong>Pre-Auth & Pre-D:</strong>
-          <span>None</span>
+          <span className="text-[#525257] text-[0.875rem] font-normal">Pre-Auth & Pre-D:</span>
+          <span className="text-[#283342] text-[1rem] font-medium">None</span>
         </div>
 
         {/* Age Restrictions */}
         <div className="flex flex-col items-start">
-          <strong>Age Restrictions:</strong>
-          <span>19 max - Student</span>
+          <span className="text-[#525257] text-[0.875rem] font-normal">Age Restrictions:</span>
+          <span className="text-[#283342] text-[1rem] font-medium">19 max - Student</span>
         </div>
 
         {/* Coordination of Benefits */}
         <div className="flex flex-col items-start">
-          <strong>Coordination of Benefits:</strong>
-          <span>Standard</span>
+          <span className="text-[#525257] text-[0.875rem] font-normal">Coordination of Benefits:</span>
+          <span className="text-[#283342] text-[1rem] font-medium">Standard</span>
         </div>
 
         {/* Medically Necessary Only */}
         <div className="flex flex-col items-start">
-          <strong>Medically Necessary Only:</strong>
-          <span>Yes</span>
+          <span className="text-[#525257] text-[0.875rem] font-normal">Medically Necessary Only:</span>
+          <span className="text-[#283342] text-[1rem] font-medium">Yes</span>
         </div>
       </div>
 
       <div className="flex flex-col items-start gap-4">
         {/* Network Participation */}
         <div className="flex flex-col items-start">
-          <strong>Network participation:</strong>
-          <span>Out of Network</span>
+          <span className="text-[#525257] text-[0.875rem] font-normal">Network participation:</span>
+          <span className="text-[#283342] text-[1rem] font-medium">Out of Network</span>
         </div>
 
         {/* Policy Effective Date */}
         <div className="flex flex-col items-start">
-          <strong>Policy effective date:</strong>
-          <span>Jun/01/2019</span>
+          <span className="text-[#525257] text-[0.875rem] font-normal">Policy effective date:</span>
+          <span className="text-[#283342] text-[1rem] font-medium">Jun/01/2019</span>
         </div>
 
         {/* Renewal */}
         <div className="flex flex-col items-start">
-          <strong>Renewal:</strong>
-          <span>Lifetime</span>
+          <span className="text-[#525257] text-[0.875rem] font-normal">Renewal:</span>
+          <span className="text-[#283342] text-[1rem] font-medium">Lifetime</span>
         </div>
 
         {/* Coinsurance Percentage */}
         <div className="flex flex-col items-start">
-          <strong>Coinsurance Percentage:</strong>
-          <span>50%</span>
+          <span className="text-[#525257] text-[0.875rem] font-normal">Coinsurance Percentage:</span>
+          <span className="text-[#283342] text-[1rem] font-medium">50%</span>
         </div>
 
         {/* Waiting Period */}
         <div className="flex flex-col items-start">
-          <strong>Waiting Period:</strong>
-          <span>None</span>
+          <span className="text-[#525257] text-[0.875rem] font-normal">Waiting Period:</span>
+          <span className="text-[#283342] text-[1rem] font-medium">None</span>
         </div>
 
         {/* Deductible */}
         <div className="flex flex-col items-start">
-          <strong>Deductible:</strong>
-          <span>$0.00</span>
+          <span className="text-[#525257] text-[0.875rem] font-normal">Deductible:</span>
+          <span className="text-[#283342] text-[1rem] font-medium">$0.00</span>
         </div>
 
         {/* Assignment of Benefits */}
         <div className="flex flex-col items-start">
-          <strong>Assignment of Benefits:</strong>
-          <span>Practice</span>
+          <span className="text-[#525257] text-[0.875rem] font-normal">Assignment of Benefits:</span>
+          <span className="text-[#283342] text-[1rem] font-medium">Practice</span>
         </div>
       </div>
     </div>

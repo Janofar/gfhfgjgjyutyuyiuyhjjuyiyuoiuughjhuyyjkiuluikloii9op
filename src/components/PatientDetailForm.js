@@ -51,7 +51,7 @@ const PatientDetailForm = ({ toggleModal, patientData, setPatientData }) => {
         <img
           src={maskGroupImg}
           alt="Patient Banner"
-          className="w-full h-28 object-cover"
+          className="object-cover"
         />
 
         <button
@@ -62,13 +62,13 @@ const PatientDetailForm = ({ toggleModal, patientData, setPatientData }) => {
         </button>
 
         <div className="p-6">
-          <h2 className="text-lg text-start font-semibold mb-4">
-            Add New Patient
+          <h2 className="text-start text-[1.62rem] text-[#1C1C1C] font-bold mb-4">
+            Add Patient
           </h2>
           <form>
             <div className="mb-4">
               <label
-                className="block text-sm font-medium text-gray-700 mb-1 text-left"
+                className="block font-medium text-gray-700 mb-1 text-[1rem]  text-left"
                 htmlFor="patientName"
               >
                 Patient Name
@@ -77,7 +77,7 @@ const PatientDetailForm = ({ toggleModal, patientData, setPatientData }) => {
                 type="text"
                 id="patientName"
                 name="name"
-                className="mt-1 block w-full border-b-2 border-gray-300 focus:border-green-600 focus:bg-green-50 focus:outline-none focus:ring-0 transition duration-300 ease-in-out"
+                className="mt-1 block font-normal text-[1rem] w-full border-b-2 border-gray-300 focus:border-green-600 focus:bg-green-50 focus:outline-none focus:ring-0 transition duration-300 ease-in-out"
                 value={formData.name}
                 onChange={handleChange}
                 required
@@ -85,24 +85,23 @@ const PatientDetailForm = ({ toggleModal, patientData, setPatientData }) => {
             </div>
             <div className="mb-4">
               <label
-                className="inline-flex items-center text-sm font-medium text-gray-700 text-left w-full"
+                className="inline-flex items-center text-[0.8rem] font-medium text-gray-700 text-left w-full"
                 htmlFor="isResponsibleParty"
               >
                 <input
                   type="checkbox"
                   id="isResponsibleParty"
                   name="isResponsibleParty"
-                  className="form-checkbox peer text-green-600 w-6 h-6"
-                  checked={formData.isResponsibleParty}
+                  className="custom-checkbox"
                   onChange={handleChange}
                 />
                 <span className="ml-2">Patient is the responsible party</span>
               </label>
             </div>
 
-            <div className="mb-5">
+            <div className="mb-5 text-[1rem] text-[#1C1C1C]">
               <label
-                className="block text-sm font-medium text-gray-700 mb-1 text-left"
+                className="block font-medium text-gray-700 mb-1 text-left"
                 htmlFor="phone"
               >
                 Phone
@@ -118,9 +117,9 @@ const PatientDetailForm = ({ toggleModal, patientData, setPatientData }) => {
               />
             </div>
 
-            <div className="mb-4">
+            <div className="mb-4 text-[1rem] text-[#1C1C1C]">
               <label
-                className="block text-sm font-medium text-gray-700 mb-1 text-left"
+                className="block font-medium text-gray-700 mb-1 text-left"
                 htmlFor="email"
               >
                 Email ID
@@ -139,7 +138,7 @@ const PatientDetailForm = ({ toggleModal, patientData, setPatientData }) => {
             <div className="flex justify-end">
               <button
                 type="submit"
-                className="bg-black text-white rounded-lg px-4 py-2"
+                className="bg-black text-white rounded-[31px] w-[7.25rem] text-[1rem] font-medium px-4 py-2"
                 onClick={addPatient}
               >
                 Add

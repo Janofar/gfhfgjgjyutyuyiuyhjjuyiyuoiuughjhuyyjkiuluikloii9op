@@ -13,13 +13,13 @@ export const Sidebar = () => {
     setIsSelected(!isSelected);
   };
   return (
-    <aside className="w-16 bg-gray-50 border-r border-gray-200 flex flex-col items-center py-4">
-      <button className="mb-4">
+   <aside className="bg-gray-50  border-r border-gray-200 flex flex-col items-center px-4 py-4">
+      <button className="mb-7">
         <MenuIcon className="w-6 h-6 text-gray-500" />
       </button>
       <button
-        className={`mb-4 p-2 ${
-          isSelected ? "bg-black text-white rounded-[5px]" : ""
+        className={`mb-7 p-2 ${
+          isSelected ? "bg-[#171717] w-[2.62rem] h-[2.62rem] text-white rounded-[5px]" : ""
         }`}
         onClick={handleClick}
       >

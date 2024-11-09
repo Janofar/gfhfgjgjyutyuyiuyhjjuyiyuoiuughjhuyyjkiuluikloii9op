@@ -39,15 +39,34 @@ code {
   background-color: #F4F4F3;
 }
 .react-tel-input:focus-within .flag-dropdown {
-  border-bottom: 2px solid #10b981 !important; /* Green bottom border on flag dropdown */
+  border-bottom: 2px solid #10b981 !important;
 }
-input[type="checkbox"] {
-  accent-color: #4CAF50;
-  /* Green color */
+.custom-checkbox {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: transparent;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  position: relative;
+  cursor: pointer;
 }
-input[type="checkbox"]:checked {
-  background-color: green !important;
-  color: white; /* Tick color (white) when checked */
+
+.custom-checkbox:checked {
+  background-color: #049C8A;
+}
+
+.custom-checkbox:checked::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  width: 0.4rem;
+  height: 0.8rem;
+  border-right: 2px solid white; /* White checkmark */
+  border-bottom: 2px solid white; /* White checkmark */
 }
 @tailwind base;
 @tailwind components;
